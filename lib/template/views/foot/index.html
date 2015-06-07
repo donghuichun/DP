@@ -1,0 +1,135 @@
+<!-- BEGIN FOOTER -->
+
+<div class="footer">
+
+    <div class="footer-inner">
+
+        2013 &copy; Metronic by keenthemes.Collect from <a href="http://www.cssmoban.com/" title="网站模板" target="_blank">网站模板</a> - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
+
+    </div>
+
+    <div class="footer-tools">
+
+			<span class="go-top">
+
+			<i class="icon-angle-up"></i>
+
+			</span>
+
+    </div>
+
+</div>
+<!-- END FOOTER -->
+
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+<!-- BEGIN CORE PLUGINS -->
+
+<script src="{MATERIAL_PATH}js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+<script src="{MATERIAL_PATH}js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+
+<script src="{MATERIAL_PATH}js/excanvas.min.js"></script>
+
+<script src="{MATERIAL_PATH}js/respond.min.js"></script>
+
+<![endif]-->
+
+<script src="{MATERIAL_PATH}js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.blockui.min.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.cookie.min.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.uniform.min.js" type="text/javascript" ></script>
+
+<!-- END CORE PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+<script src="{MATERIAL_PATH}js/jquery.vmap.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.vmap.russia.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.vmap.world.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.vmap.europe.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.vmap.germany.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.vmap.usa.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.vmap.sampledata.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.flot.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.flot.resize.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.pulsate.min.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/date.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/daterangepicker.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.gritter.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/fullcalendar.min.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.easy-pie-chart.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/jquery.sparkline.min.js" type="text/javascript"></script>
+
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<script src="{MATERIAL_PATH}js/app.js" type="text/javascript"></script>
+
+<script src="{MATERIAL_PATH}js/index.js" type="text/javascript"></script>
+
+<!-- END PAGE LEVEL SCRIPTS -->
+
+<script>
+
+    jQuery(document).ready(function() {
+
+        App.init(); // initlayout and core plugins
+
+        Index.init();
+
+        Index.initJQVMAP(); // init index page's custom scripts
+
+        Index.initCalendar(); // init index page's custom scripts
+
+        Index.initCharts(); // init index page's custom scripts
+
+        Index.initChat();
+
+        Index.initMiniCharts();
+
+        Index.initDashboardDaterange();
+
+        Index.initIntro();
+
+    });
+
+    $("a").click(function(){
+        $.get("http://localhost/dp/index.php?m=sys&c=sys&a=body", function(result){
+            $("#page-content-replace").html(result);
+        });
+    });
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+
+<!-- END BODY -->
+
+</html>
