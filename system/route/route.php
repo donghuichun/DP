@@ -61,7 +61,12 @@ class Route
         $c = $c ? $c : $GLOBALS['DP_controller'];
         $a = $a ? $a : $GLOBALS['DP_action'];
 
-        $file = APP_PATH.$m.'/controllers/'.$c.'.php';
+        if (strrchr($m,'Api') !== false) {
+            $file = APP_PATH.$m.'/api/'.$c.'.php';
+        }else{
+            $file = APP_PATH.$m.'/controllers/'.$c.'.php';
+        }
+
         if(!file_exists($file))
         {
             $this->_404();
@@ -79,13 +84,17 @@ class Route
 
     }
 
-    public function get_url($params = array(), $url = '')
+    public function get_url($params = array(), $url = '',$isApi=false)
     {
         switch ($this->route_type) {
             case 1:
 
                 $url = ($url ? $url : DP_BASEURL) . 'index.php';
                 if (is_array($params) && $params) {
+                    if($isApi)
+                    {
+                        $params['m'] = $params['m']?($params['m'].'Api'):'';
+                    }
                     $url = $url . '?' . http_build_query($params);
                 }
                 break;
