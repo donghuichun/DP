@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * @package	dp
+ * @author	DongHuichun Email:dhc.1229@163.com
+ * @link	http://donghuichun.com
+ * @version 1.0
+ * @copyright	Copyright (c) 2015-05-09.
+ */
+
+ //初始化所有配置文件
